@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to MoGo</title>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		html, body, div, span,
+		h1, h2, h3, h4, h5, h6, p, 
+		a, img, footer, header, section {
+			margin: 0;
+			padding: 0;			
+			border: 0;
+			font-size: 100%;
+			line-height: 1;
+			font: inherit;			
+			vertical-align: baseline;
+		}
+
+		body {
+			position: absolute;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+    		min-width: 1200px;
+				margin: 0;								
+    		font: 0.75em/1.5 Arial, sans-serif;    		   		
+    		color: #ffffff;
+    		background-color: #ffffff;	
+
+    		/*width: 1920px; 
+    		height: 3197px;
+    		background-image: url("img/01-CreativeTemplate.jpg");
+    		opacity: 0.2;    		
+    		background-size: 1920px 3197px;	    */
+		}	
+
+		.head-background {	
+			width: auto;
+			height: 1000px;
+			background: url(img/header-background.jpg);
+			background-position: 50% 0;
+			background-size: cover;
+		}
+
+		.head-background__head-section-text {
+			position: relative;
+		    top: 100px;
+		    width: 1200px;
+		    height: 900px;
+		    margin: 0 auto;	
+		    padding-top: 111px;		    
+		    text-align: center;		    	
+		}
+
+		.head-section-text__title-h1 {	
+			margin: 0;
+			padding-bottom: 32px;
+    		font: 72px Kaushan_script, Arial sans-serif;   		
+		}
+
+		.head-section-text__title-h2 {			
+		    margin: 0;
+		    font: bold 150px Montserrat, Arial sans-serif;
+		    line-height: 140px;
+		    text-transform: uppercase;
+		}
+
+		.head-section-text__title-h2::after {			
+			display: block;
+			width: 60px;			
+			margin: 0 auto;	
+			margin-top: 48px;			
+		    border-bottom: 3px solid #ffffff;
+			content: ' ';
+		}	
+
+		.head-section-text__head-button {
+			display: inline-block;
+		    width: 160px;
+		    height: 40px;
+			margin-top: 50px;
+		    text-decoration: none;		    
+		    border: 2px solid #ffffff;	
+		    line-height: 40px;	    
+		}
+
+/*		.head-section-text__head-button:hover {			
+			opacity: 0.6;			
+			transition: opacity 0.3s ease-in-out;				
+		}*/
+
+		.head-button__caption {
+			vertical-align: baseline;
+			font: bold 14px Montserrat, Arial sans-serif;
+		    text-transform: uppercase;
+			line-height: 1;		    
+		    color: #ffffff;
+		}		
+
+		.head-background__section-nav {	
+			width: 1200px;
+			height: 100px;	
+			margin: 0 auto;		
+			padding-top: 27px;
+			text-align: justify;			
+		}
+
+		.head-background__section-nav::after {			
+			display: inline-block;
+			width: 100%;
+			content: ' ';
+		}
+
+		.section-nav__link {
+			position: relative;
+			display: inline-block;
+		    width: 280px;
+		    height: 73px;		    
+		    padding-top: 0;
+		    text-decoration: none;
+		    color: rgba(255, 255, 255, 0.6);			   
+		    border-top: 3px solid;	
+		    border-color: rgba(255, 255, 255, 0.6);		    
+		    line-height: 76px;
+		}
+
+		.section-nav-link__numeric-caption {
+			vertical-align: baseline;
+			display: inline-block;
+			font: bold 24px Montserrat, Arial sans-serif;
+			line-height: 1;			
+		}
+
+		.section-nav-link__text-caption {
+			vertical-align: baseline;
+			display: inline-block;
+			font: 18px Montserrat, Arial sans-serif;			
+			line-height: 1;
+			text-transform: uppercase;
+		}
+
+		.section-nav__link_active {	
+			color: rgba(255, 255, 255, 0.99);
+		    border-color: rgba(255, 255, 255, 0.99);
+		}
+
+		.section-nav__link::before {
+			position: absolute;
+    		top: -3px;
+    		left: 0;
+    		display: block;
+    		height: 3px;
+   			width: 0;
+    		background: #f38181;
+    		transition: width 1s ease-in-out;    		 
+    		content: ' '; 
+		}	
+
+		.section-nav__link:hover::before {
+			width: 25%;			
+		}	
+					
+
+
+
+
+		header {	
+			position: absolute;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+			width: auto;
+			height: 100px;
+		}
+
+		.head-top {	
+			position: relative;		    
+		    width: 1200px; 
+			height: 100px;	
+			margin: 0 auto;		
+			text-align: right;			
+		}
+
+		.head-top::after {			
+			display: inline-block;
+			width: 100%;
+			content: ' ';			
+		}
+
+		.head-top__logo {
+			float: left;
+			line-height: 56px;
+		}
+		
+		.logo__link {			
+			vertical-align: bottom;	
+			font: bold 30px Montserrat, Arial sans-serif;						
+			text-decoration: none;
+			color: #ffffff;
+		}	
+
+		.head-top__container {
+		    height: 100%;
+		    padding-top: 24px;
+		}		
+        
+        .head-top__menu {	
+        	display: inline-block;		    
+		    height: 100%;
+		}
+
+		.h-top-menu__item {
+			display: inline-block;
+			margin-left: 54px;
+		}
+
+		.h-top-menu__link {					
+			display: inline-block;
+			vertical-align: middle;				
+			font: 400 14px Montserrat, Arial sans-serif;
+			text-transform: uppercase;						
+			text-decoration: none;
+			line-height: 38px;	
+			text-align: right;    		   
+			color: #ffffff;		
+		}	
+
+		.h-top-menu__item::before {
+    		position: relative;
+    		top: 38px;
+    		left: 0;
+    		bottom: 0;
+    		display: block;
+    		height: 3px;
+   			width: 0;
+    		background: #fce38a;
+    		transition: width 0.3s ease-in-out;    		 
+    		content: ' ';   		
+		} 
+
+		.h-top-menu__item:hover .h-top-menu__link {
+			color: #fce38a;   
+		}
+
+		.h-top-menu__item:hover::before {	
+			width: 100%;		
+		}
+
+		.head-top__cart {	
+        	display: inline-block;
+		    margin-left: 49px;
+		}
+
+		.h-top-cart__link {
+			display: inline-block;
+			vertical-align: bottom;
+			width: 18px;
+			height: 18px;			
+			background-image: url(img/cart-search-icons.png);
+			background-position: 0 0;			
+		}
+
+		.h-top-cart__link:hover {	
+			background-position: 0 87px;			
+		}
+
+		.head-top__search {	
+        	display: inline-block; 
+			margin-left: 37px;	
+		}
+
+		.h-top-search__link {
+			display: inline-block;
+			vertical-align: bottom;	
+			width: 18px;
+			height: 18px;						
+			background-image: url(img/cart-search-icons.png);
+			background-position: 88px 0;			
+		}
+
+		.h-top-search__link:hover {	
+			background-position: 88px 86px;			
+		}
+
+
+
+
+		.about {	
+			width: auto;
+			height: 750px;		
+			padding-top: 86px;
+		}
+
+		.section-container {	
+			width: 1200px;
+			height: 100%;	
+			margin: 0 auto;	
+			text-align: center;			
+		}
+
+		.about-title__line1 {
+			font: 24px Kaushan_script, Arial sans-serif;
+    		color: #333333;
+		}
+
+		.about-title__line2 {			
+			font: bold 30px Montserrat, Arial sans-serif;
+		    text-transform: uppercase;
+		    color: #333333;
+		    padding-top: 14px;	
+		}
+
+		.about__title::after {			
+			display: block;
+		    width: 60px;
+		    margin: 0 auto;
+		    margin-top: 35px;
+		    border-bottom: 3px solid #f38181;
+		    content: ' ';
+		}
+		
+		.about__text {			
+		    width: 960px;
+		    margin: 0 auto;
+		    padding-top: 41px;	
+		    font: 15px Roboto, Arial sans-serif;
+		    line-height: 24px;
+		    color: #999999;		       
+		}
+
+		.about__pic-list {			
+			position: relative;
+		    top: 98px;
+		    width: 100%;
+		    height: 250px;
+		    text-align: justify;
+		}
+
+		.about__pic-list::after {			
+			display: inline-block;
+			width: 100%;
+			content: ' ';
+		}
+
+		.about-pic__background {			
+			display: inline-block;
+			background-color: #95e1d3;
+		}
+
+		.about__pic {
+			position: relative;			
+			width: 380px;
+			height: 250px;			
+		}
+
+		.about__pic_img1 {			
+			background-image: url(img/photo1.jpg);					
+		}
+
+		.about__pic_img2 {			
+			background-image: url(img/photo2.jpg);					
+		}
+
+		.about__pic_img3 {			
+			background-image: url(img/photo3.jpg);					
+		}
+
+		.about-pic__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;         
+            z-index: 5;
+            display: none;
+            background: #fce38a;
+   			background: linear-gradient(to top, #fce38a, #f38181);  			
+   			opacity: 0.9;
+   			cursor: pointer;
+        }
+
+        .about-pic-overlay__text {
+        	position: absolute;
+            top: 5px;
+            left: 0;
+            right: 0;
+            bottom: 0;         
+            z-index: 5;
+            display: none;           
+   			background-image: url(img/about-overlay-text.png);
+   			background-repeat: no-repeat;
+   			background-position: center, center;   			
+        }
+
+        .about__pic:hover {
+            transform: translate(-10px, -10px);
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .about__pic:hover .about-pic__overlay {
+            display: block;           
+        }
+
+        .about__pic:hover .about-pic-overlay__text {
+            display: block;            
+        }
+
+
+
+
+		.achievements {
+			width: auto;
+			height: 270px;					
+			background-color: #95e1d3;	
+		}
+
+		.section-container_achievements {
+			width: 1201px;			
+			font-size: 0;
+			text-align: right;
+			background-color: rgba(255, 225, 255, 0.3);	
+		}		
+
+		.achievements__item {
+			display: inline-block;
+			width: 239px;
+			height: 270px;			
+			margin-right: 1px;						
+			text-align: center;	
+			background-color: #95e1d3;
+			line-height: 270px;				
+		}
+
+		.achievements-item__caption {			
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		.achievements-item__num-line {
+			margin-top: -5px;	
+    		line-height: 1;
+    		font: bold 72px Montserrat, Arial sans-serif;    		
+		}
+
+		.achievements-item__text-line {	
+    		line-height: 1;			
+    		padding-top: 14px;
+    		font: 14px Montserrat, Arial sans-serif;
+    		text-transform: uppercase;    		
+		}	
+
+
+
+
+		.services {	
+			width: auto;
+			padding-top: 104px;
+			padding-bottom: 32px;
+		}
+
+		.services-title__line1 {
+			font: 24px Kaushan_script, Arial sans-serif;
+    		color: #333333;	
+		}
+
+		.services-title__line2 {	
+			padding-top: 14px;
+		    padding-bottom: 37px;		
+			font: bold 30px Montserrat, Arial sans-serif;
+			text-transform: uppercase;
+		    color: #333333;		    
+		}
+
+		.services__title::after {			
+			display: block;
+		    width: 60px;
+		    margin: 0 auto;
+		    border-bottom: 3px solid #f38181;
+		    content: ' ';
+		}
+
+		.services__item-list {					
+			padding-top: 17px;
+		}		
+
+		.services__item-block {					
+			width: 1200px;
+			font-size: 0;
+			text-align: left;	
+		}
+
+		.services__item-block_border-top {					
+			border-top: 1px solid #e5e5e5;	
+		}
+
+		.services__item {
+			display: inline-block;
+			vertical-align: top;
+			width: 400px;
+			padding: 48px 0 48px 31px;
+		}
+
+		.services__icon {
+			display: inline-block;
+			vertical-align: top;
+			width: 32px;
+			height: 32px;
+			margin-top: 2px;				
+		}
+
+		.services__icon_photography {					
+			background-image: url(img/services-icon.png);
+			background-position: -35px -35px;
+		}
+
+		.services__icon_webdesign {			
+			background-image: url(img/services-icon.png);
+			background-position: -135px -35px;
+		}	
+
+		.services__icon_creativity {			
+			background-image: url(img/services-icon.png);
+			background-position: -235px -35px;
+		}	
+
+		.services__icon_seo {			
+			background-image: url(img/services-icon.png);
+			background-position: -35px -135px;
+		}	
+
+		.services__icon_csshtml {			
+			background-image: url(img/services-icon.png);
+			background-position: -135px -135px;
+		}	
+
+		.services__icon_digital {			
+			background-image: url(img/services-icon.png);
+			background-position: -235px -135px;			
+		}	
+
+		.services__item-description {
+			display: inline-block;
+			vertical-align: top;
+			width: 290px;
+			margin-left: 27px;
+			text-align: left;			
+		}
+
+		.services-item-description__title {
+			margin-top: 0;
+			font: 14px Montserrat, Arial sans-serif;
+			text-transform: uppercase;
+			color: #333333;
+		}
+
+		.services-item-description__text {
+			margin-top: 11px;			
+			margin-bottom: 0;
+			font: 15px Roboto, Arial sans-serif;
+			line-height: 24px;					
+			color: #999999;						
+		}
+
+
+
+
+		footer {		
+			width: auto;
+			height: 565px;	
+			text-align: center;	
+			background-color: #f8f8f8;
+		}
+
+		.footer-container {
+			width: 1200px;
+			height: 100%;			
+			margin: 0 auto;
+			text-align: center;					
+		}
+
+		.footer__top {					
+			width: 1200px;
+			height: 500px;	
+			padding-top: 71px;
+			font-size: 0px;	
+			text-align: left;			
+			border-bottom: 1px solid #e5e5e5		
+		}
+
+		.footer-top__left {
+			display: inline-block;
+			vertical-align: top;
+			width: 510px;
+			height: 420px;	
+			padding-right: 40px;					
+		}
+
+		.f-top-left__title {
+			margin: 0 0 0 -3px;
+			font: bold 46px Montserrat, Arial sans-serif;	
+			color: #cccccc;			
+		}
+
+		.f-top-left__text {			
+		    padding-top: 28px;
+		    padding-bottom: 36px;
+		    font: 15px Roboto, Arial sans-serif;
+		    line-height: 24px;
+		    color: #999999;
+		}	
+
+		.f-top-left__social {
+			padding-top: 10px;
+			padding-bottom: 36px;
+		}
+
+		.f-social__caption {
+			display: inline-block;
+			color: #333333;
+		}
+
+		.f-social-caption__s1 {
+			display: inline-block;	    
+		    margin: 0 2px 0 -3px;	
+		    font: bold 18px Montserrat, Arial sans-serif;
+		    color: #333333;	
+		}	
+
+		.f-social-caption__s2 {
+			display: inline-block;		    
+		    font: 14px Montserrat, Arial sans-serif;
+		    color: #333333;		    						
+		}
+
+		.f-social__links {
+			display: inline-block; 
+			width: 480px;
+			margin-top: 15px; 
+			padding-top: 14px;
+			border-top: 1px solid #e5e5e5;	 
+		}	
+
+		.f-social-links__text-caption {			
+			vertical-align: middle;	
+			padding-right: 23px;
+			font: italic 300 15px Roboto, Arial sans-serif;
+			color: #999999;
+		}	
+
+		.social-link {
+			display: inline-block;
+			vertical-align: middle;			
+		}
+
+		.social-link_facebook {			
+			width: 8px;
+			height: 16px;
+			margin-right: 16px;
+			background-image: url(img/follows-icon.png);
+			background-position: 0 0;
+		}
+
+		.social-link_twitter {			
+			width: 16px;
+			height: 16px;
+			margin-right: 16px;
+			background-image: url(img/follows-icon.png);
+			background-position: -24px 0;
+		}
+
+		.social-link_instagram {			
+			width: 16px;
+			height: 16px;
+			margin-right: 15px;
+			background-image: url(img/follows-icon.png);
+			background-position: -56px 0;
+		}
+
+		.social-link_pinterest {			
+			width: 13px;
+			height: 16px;
+			margin-right: 16px;
+			background-image: url(img/follows-icon.png);
+			background-position: -87px 0;
+		}
+
+		.social-link_google-plus {			
+			width: 16px;
+			height: 16px;
+			margin-right: 14px;
+			background-image: url(img/follows-icon.png);
+			background-position: -116px 0;
+		}
+
+		.social-link_youtube {			
+			width: 16px;
+			height: 16px;
+			margin-right: 14px;
+			background-image: url(img/follows-icon.png);
+			background-position: -146px 0;
+		}
+
+		.social-link_dribbble {			
+			width: 16px;
+			height: 16px;
+			margin-right: 17px;
+			background-image: url(img/follows-icon.png);
+			background-position: -176px 0;
+		}
+
+		.social-link_tumblr {			
+			width: 10px;
+			height: 16px;
+			margin-right: 0;
+			background-image: url(img/follows-icon.png);
+			background-position: -209px 0;
+		}
+		
+		.f-subscribe__input	{
+			display: inline-block;
+		    vertical-align: top;
+		    width: 229px;				    
+		    height: 40px;
+		    padding: 0px 11px;		    
+		    font: italic 300 15px Roboto, Arial sans-serif;
+		    color: #cccccc;
+		    background-color: #ffffff;
+		    border: 1px solid #e7e7e7; 	
+		    border-right: none;
+		}
+
+		.f-subscribe__input::-webkit-input-placeholder {
+			color: #cccccc; 
+		}
+
+		.f-subscribe__input:-moz-placeholder {
+			color: #cccccc; 
+		}
+
+		.f-subscribe__button {
+			display: inline-block;
+		    vertical-align: top;			
+		    height: 40px;
+		    padding: 0px 34px;
+		    font: bold 14px Montserrat, Arial sans-serif;
+		    text-transform: uppercase;	   
+		    line-height: 40px;		    
+		    color: #ffffff;
+		    background-color: #95e1d3;
+		    cursor: pointer;
+		}
+
+		.footer-top__blogs {
+			display: inline-block;
+			vertical-align: top;
+			width: 420px;
+			height: 420px;						
+		}
+
+		.f-blogs__title {			
+			padding-top: 9px;
+    		padding-bottom: 37px;
+    		font: 14px Montserrat, Arial sans-serif;
+    		text-transform: uppercase;
+			color: #333333;	
+		}
+
+		.f-blogs__item {
+			width: 400px;
+			height: 110px;
+    		padding-bottom: 30px;
+		}
+
+		.f-blogs__item-pic {
+			display: inline-block;
+			vertical-align: top;
+			width: 120px;
+			height: 80px;						
+		}
+
+		.f-blogs__item-pic_img1 {			
+			background-image: url(img/blogs-pic1.jpg);
+		}
+
+		.f-blogs__item-pic_img2 {			
+			background-image: url(img/blogs-pic2.jpg);
+		}
+
+		.f-blogs__item-pic_img3 {			
+			background-image: url(img/blogs-pic3.jpg);
+		}
+
+		.f-blogs__item-description {
+			display: inline-block;
+			width: 240px;
+			height: 80px;		
+			padding-top: 17px;
+			padding-left: 20px;			
+		}
+
+		.f-blogs-item-description__text {				
+			font: 12px Montserrat, Arial sans-serif;
+			text-transform: uppercase;				
+			line-height: 18px;
+			text-decoration: none;	
+			color: #333333;						
+		}
+
+		.f-blogs-item-description__text:hover {            
+            text-decoration: underline;
+            color: #999999;
+        }  
+
+		.f-blogs-item-description__date-text {	
+			padding-top: 3px;			
+			font: italic 300 13px Roboto, Arial sans-serif;	
+			color: #999999;			
+		}
+
+		.footer-top__instagram {
+			display: inline-block;
+			vertical-align: top;
+			width: 270px;
+			height: 420px;					
+		}
+
+		.f-instagram__title {				
+			padding-top: 9px;
+    		padding-bottom: 35px;
+    		font: 14px Montserrat, Arial sans-serif;
+    		text-transform: uppercase;
+			color: #333333;	
+		}
+
+		.f-instagram-widget {
+			font-size: 0px;
+		}
+
+		.f-instagram__pic {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 88px;
+			height: 88px;			
+			margin-top: 2px;
+			margin-right: 2px; 
+		}
+
+		.f-instagram__pic_img1 {			
+			background-image: url(img/inst-pic1.jpg);
+		}
+
+		.f-instagram__pic_img2 {
+			background-image: url(img/inst-pic2.jpg);
+		}
+
+		.f-instagram__pic_img3 {
+			background-image: url(img/inst-pic3.jpg);
+		}
+
+		.f-instagram__pic_img4 {
+			background-image: url(img/inst-pic4.jpg);
+		}
+
+		.f-instagram__pic_img5 {
+			background-image: url(img/inst-pic5.jpg);
+		}
+
+		.f-instagram__pic_img6 {
+			background-image: url(img/inst-pic6.jpg);
+		}
+
+		.f-instagram__pic_img7 {
+			background-image: url(img/inst-pic7.jpg);
+		}
+
+		.f-instagram__pic_img8 {
+			background-image: url(img/inst-pic8.jpg);
+		}
+
+		.f-instagram__pic_img9 {
+			background-image: url(img/inst-pic9.jpg);
+		}
+
+		.f-instagram__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;            
+            z-index: 5;
+            display: none;
+            background: rgba(255, 255, 255, 0.15);             
+        }
+
+        .f-instagram__pic:hover .f-instagram__overlay {
+            display: block;
+        }
+
+		.f-instagram__link {
+			display: inline-block;				
+			padding-top: 16px;
+			margin-left: -1px;
+			font: italic 300 13px Roboto, Arial sans-serif;				
+			text-decoration: none;
+			color: #333333;
+		}
+
+		.f-instagram__link:hover {
+            color: #999999;
+        }  
+
+		.footer__down {
+			width: 1200px;
+		    height: 65px;
+		    padding-top: 3px;
+		    font-size: 0px;
+		    line-height: 65px;		    
+		}
+
+		.copyright-text {					
+			font: 14px Montserrat, Arial sans-serif;	
+			color: #333333;		
+		}
+
+		.copyright-text_color {	
+			color: #f38181;			
+		}
+
+	</style>
+</head>
+<body>
+	<div class="head-background">
+		<div class="head-background__head-section-text">				
+			<h1 class="head-section-text__title-h1">Creative Template</h1>	
+			<div class="head-section-text__title-h2">
+				<h2>Welcome</h2>	
+				<h2>to mogo</h2>
+			</div>							
+			<a class="head-section-text__head-button" href="">
+				<span class="head-button__caption">learn more</span>
+			</a>
+		</div>
+
+		<div class="head-background__section-nav">
+			<a class="section-nav__link section-nav__link_active" href="">					
+				<span class="section-nav-link__numeric-caption">01</span>
+				<span class="section-nav-link__text-caption">Intro</span>					
+			</a>
+			<a class="section-nav__link" href="">					
+				<span class="section-nav-link__numeric-caption">02</span>
+				<span class="section-nav-link__text-caption">Work</span>	
+			</a>
+			<a class="section-nav__link" href="">
+				<span class="section-nav-link__numeric-caption">03</span>
+				<span class="section-nav-link__text-caption">About</span>
+			</a>
+			<a class="section-nav__link" href="">					
+				<span class="section-nav-link__numeric-caption">04</span>
+				<span class="section-nav-link__text-caption">Contacts</span>					
+			</a>
+		</div>	
+	</div>	
+
+	<header>
+		<div class="head-top">			
+			<div class="head-top__logo">
+				<a class="logo__link" href="">MoGo</a>
+			</div>
+			<div class="head-top__container">
+				<div class="head-top__menu">
+					<div class="h-top-menu__item">
+						<a class="h-top-menu__link" href="">About</a>
+					</div>
+					<div class="h-top-menu__item">
+						<a class="h-top-menu__link" href="">Service</a>
+					</div>
+					<div class="h-top-menu__item">
+						<a class="h-top-menu__link" href="">Work</a>
+					</div>
+					<div class="h-top-menu__item">
+						<a class="h-top-menu__link" href="">Blog</a>
+					</div>
+					<div class="h-top-menu__item">
+						<a class="h-top-menu__link" href="">Contact</a>
+					</div>
+				</div>
+				<div class="head-top__cart">
+					<a class="h-top-cart__link" href=""></a>
+				</div>
+				<div class="head-top__search">
+					<a class="h-top-search__link" href=""></a>
+				</div>
+			</div>			
+		</div>
+	</header>
+
+	<section class="about">
+		<div class="section-container">	
+			<div class="about__title">
+				<div class="about-title__line1">What we do</div>
+				<div class="about-title__line2">Story about us	</div>
+			</div>
+
+			<p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>			
+
+			<div class="about__pic-list">
+				<div class="about-pic__background">
+					<div class="about__pic about__pic_img1">
+						<div class="about-pic__overlay">
+							<div class="about-pic-overlay__text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-pic__background">
+					<div class="about__pic about__pic_img2">
+						<div class="about-pic__overlay">
+							<div class="about-pic-overlay__text">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="about-pic__background">
+					<div class="about__pic about__pic_img3">
+						<div class="about-pic__overlay">
+							<div class="about-pic-overlay__text">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<section class="achievements">
+		<div class="section-container section-container_achievements">
+			<div class="achievements__item">
+				<div class="achievements-item__caption">
+					<div class="achievements-item__num-line">42</div>
+					<div class="achievements-item__text-line">Web design projects</div>
+				</div>
+			</div>
+			<div class="achievements__item">
+				<div class="achievements-item__caption">
+					<div class="achievements-item__num-line">123</div>
+					<div class="achievements-item__text-line">happy client</div>
+				</div>
+			</div>
+			<div class="achievements__item">
+				<div class="achievements-item__caption">
+					<div class="achievements-item__num-line">15</div>
+					<div class="achievements-item__text-line">award winner</div>
+				</div>
+			</div>
+			<div class="achievements__item">
+				<div class="achievements-item__caption">
+					<div class="achievements-item__num-line">99</div>
+					<div class="achievements-item__text-line">cup of coffee</div>
+				</div>
+			</div>
+			<div class="achievements__item">
+				<div class="achievements-item__caption">
+					<div class="achievements-item__num-line">24</div>
+					<div class="achievements-item__text-line">members</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services">
+		<div class="section-container">
+			<div class="services__title">
+				<div class="services-title__line1">We work with</div>
+				<div class="services-title__line2">Amazing services</div>						
+			</div>
+
+			<div class="services__item-list">
+				<div class="services__item-block">
+					<div class="services__item">
+						<div class="services__icon services__icon_photography"></div>
+						<div class="services__item-description">
+							<h2 class="services-item-description__title">Photography</h2>
+							<p class="services-item-description__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+						</div>
+					</div>
+					<div class="services__item">
+						<div class="services__icon services__icon_webdesign"></div>
+						<div class="services__item-description">
+							<h2 class="services-item-description__title">Web design</h2>
+							<p class="services-item-description__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+						</div>
+					</div>
+					<div class="services__item">
+						<div class="services__icon services__icon_creativity"></div>
+						<div class="services__item-description">
+							<h2 class="services-item-description__title">Creativity</h2>
+							<p class="services-item-description__text">Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="services__item-block services__item-block_border-top">
+					<div class="services__item">
+						<div class="services__icon services__icon_seo"></div>
+						<div class="services__item-description">
+							<h2 class="services-item-description__title">SEO</h2>
+							<p class="services-item-description__text">Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+						</div>
+					</div>
+					<div class="services__item">
+						<div class="services__icon services__icon_csshtml"></div>
+						<div class="services__item-description">
+							<h2 class="services-item-description__title">CSS/HTML</h2>
+							<p class="services-item-description__text">Lorem dolor sit amet, consectetur adipiscing elit, sed do tempor.</p>
+						</div>
+					</div>
+					<div class="services__item">
+						<div class="services__icon services__icon_digital"></div>
+						<div class="services__item-description">
+							<h2 class="services-item-description__title">Digital</h2>
+							<p class="services-item-description__text">Sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="footer-container">
+			<div class="footer__top">
+				<div class="footer-top__left">
+					<div class="f-top-left__title">MoGo</div>
+					<div class="f-top-left__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>					
+					<div class="f-top-left__social">
+						<div class="f-social__caption">
+							<span class="f-social-caption__s1">15k</span>
+							<span class="f-social-caption__s2">followers</span>			
+						</div>						
+						<div class="f-social__links">
+							<span class="f-social-links__text-caption">Follow Us:</span>
+							<a class="social-link social-link_facebook" href=""></a>
+							<a class="social-link social-link_twitter" href=""></a>
+							<a class="social-link social-link_instagram" href=""></a>
+							<a class="social-link social-link_pinterest" href=""></a>
+							<a class="social-link social-link_google-plus" href=""></a>
+							<a class="social-link social-link_youtube" href=""></a>
+							<a class="social-link social-link_dribbble" href=""></a>
+							<a class="social-link social-link_tumblr" href=""></a>
+						</div>
+					</div>
+                    <div class="f-top-left__subscribe">
+	                    <input type="text" class="f-subscribe__input" placeholder="Your Email..."> 
+	                    <div class="f-subscribe__button">Subscribe</div>
+                    </div>
+		           
+				</div>
+
+				<div class="footer-top__blogs">
+					<div class="f-blogs__title">Blogs</div>
+					<div class="f-blogs__item">						
+						<div class="f-blogs__item-pic f-blogs__item-pic_img1"></div>
+						<div class="f-blogs__item-description">
+							<a class="f-blogs-item-description__text" href="">Lorem ipsum dolor sit amet, concectetur adipiscing</a>
+							<div class="f-blogs-item-description__date-text">Jan 9, 2016</div>
+						</div>						
+					</div>
+					<div class="f-blogs__item">						
+						<div class="f-blogs__item-pic f-blogs__item-pic_img2"></div>
+						<div class="f-blogs__item-description">
+							<a class="f-blogs-item-description__text" href="">concectetur adipiscing elit, sed do eiusmod tempor</a>
+							<div class="f-blogs-item-description__date-text">Jan 9, 2016</div>
+						</div>						
+					</div>
+					<div class="f-blogs__item">						
+						<div class="f-blogs__item-pic f-blogs__item-pic_img3"></div>
+						<div class="f-blogs__item-description">
+							<a class="f-blogs-item-description__text" href="">Sed do eiusmod tempor incididunt ut labore</a>
+							<div class="f-blogs-item-description__date-text">Jan 9, 2016</div>
+						</div>						
+					</div>
+				</div>
+
+				<div class="footer-top__instagram">
+					<div class="f-instagram__title">Instagram</div>
+					<div class="f-instagram-widget">						
+						<a class="f-instagram__pic f-instagram__pic_img1" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img2" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img3" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img4" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img5" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img6" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img7" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img8" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>
+
+						<a class="f-instagram__pic f-instagram__pic_img9" href="">
+							<div class="f-instagram__overlay">
+							</div>
+						</a>						
+					</div>
+					<a class="f-instagram__link" href="">View more photos</a>
+				</div>
+			</div>
+			
+			<div class="footer__down">				
+				<span class="copyright-text">© 2016 MoGo free PSD template by   </span>
+				<span class="copyright-text copyright-text_color">Laaqiq</span>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
