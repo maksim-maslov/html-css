@@ -1,1 +1,1 @@
-Реализация проекта доступна по ссылке: [https://maksim-maslov.github.io/html-MoGo](https://maksim-maslov.github.io/html-MoGo)
+Реализация проекта доступна по ссылке: [https://maksim-maslov.github.io/html-css](https://maksim-maslov.github.io/html-css)
